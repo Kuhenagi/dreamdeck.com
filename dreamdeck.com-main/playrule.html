@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/main.css">
+    <title>空想構築.com</title>
+</head>
+<body>
+    <script
+    src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous"></script>
+    <script src="src/main.js"></script>
+    <div class="header">
+        <center><img src="src/header.png" alt="DreamDecksOnline" width="800"></center>
+        <div id="humberger">
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>    
+    </div>
+    <div class="text" style="height: 360px;">
+        <h1 style="left: 30px;top: 30px;position: relative;">このページの使い方</h1>
+        <h2 style="left: 30px;top: 30px;position: relative;">ページ下のジェネレータに対戦情報を記入すると、</h2>
+        <h2 style="left: 30px;top: 30px;position: relative;">テキストファイルがダウンロードされるので、</h2>
+        <h2 style="left: 30px;top: 30px;position: relative;">使い方の2つ目のリンクのHTMLアップロードに、</h2>
+        <h2 style="left: 30px;top: 30px;position: relative;">そのファイルをアップロードしてください。</h2>
+    </div>
+    <div class="text" style="background-color: cadetblue;height: 600px;">
+        <h1 style="left: 30px;top: 30px;position: relative;">ジェネレータ</h1>
+        <h2 style="left: 30px;top: 30px;position: relative;">内容(HTML記述)<textarea id="index"></textarea></h2>
+        <h2 style="left: 30px;top: 30px;position: relative;">管理者名<input type="text" id="organizer"></h2>
+        <h2 style="left: 30px;top: 30px;position: relative;">募集人数<input type="number" id="members"></h2>
+        <h2 style="left: 30px;top: 30px;position: relative;">レギュレーション<select name="reg" id="reg" value="null" onchange="descriptionregulation()">
+            <option value="null"></option>
+            <option value="or">オリジナル</option>
+            <option value="ad">アドバンス</option>
+            <option value="2b">2ブロック構築戦</option>
+            <option value="sh">シールド戦</option>
+            <option value="d0">殿堂ゼロ</option>
+            <option value="t2">テキスト2倍</option>
+            <option value="t0">テキスト0倍</option>
+            <option value="to">テキスト100倍</option>
+            <option value="oc">ワンカード構築戦</option>
+            <option value="tc">ツーカード構築戦</option>
+            <option value="at">全TCG異種格闘技</option>
+            <option value="fg">構築自由</option>
+        </select></h2>
+        <h2 style="left: 30px;top: 30px;position: relative;">備考<input type="text" id="remarks"></h2>
+        <h2 style="left: 30px;top: 30px;position: relative;" id="regdes">レギュレーション<br>説明欄</h2>
+        <a style="left: 30px;top: 30px;position: relative;background-color: azure;" id="download" href="#" download="index.html" onclick="downloadHTML();">ダウンロード</a>
+    </div>
+</body>
+</html>
